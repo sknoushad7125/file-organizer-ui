@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileHub - Smart Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <header class="topbar">
+            <div class="logo">FileHub</div>
+            
+            <div class="header-controls">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search files...">
+                </div>
+
+                <button class="icon-btn" id="btn-sort" title="Sort"><i class="fa-solid fa-arrow-down-a-z"></i> Sort</button>
+
+                <div class="view-toggle">
+                    <button id="btn-grid" class="active"><i class="fa-solid fa-table-cells"></i></button>
+                    <button id="btn-list"><i class="fa-solid fa-list-ul"></i></button>
+                </div>
+
+                <button class="icon-btn" id="btn-theme" title="Toggle Theme"><i class="fa-regular fa-sun"></i></button>
+
+                <button class="btn-primary" id="btn-new">
+                    <i class="fa-solid fa-plus"></i> New
+                </button>
+            </div>
+        </header>
+
+        <nav class="breadcrumbs" id="breadcrumbs">
+            </nav>
+
+        <main class="workspace" id="workspace">
+            </main>
+    </div>
+
+    <div class="context-menu" id="context-menu">
+        <div class="menu-item" id="ctx-preview"><i class="fa-regular fa-eye"></i> Preview</div>
+        <div class="menu-item" id="ctx-rename"><i class="fa-solid fa-pen"></i> Rename</div>
+        <div class="menu-item" id="ctx-copy"><i class="fa-regular fa-copy"></i> Copy</div>
+        <div class="menu-item" id="ctx-download"><i class="fa-solid fa-download"></i> Download</div>
+        <div class="menu-divider"></div>
+        <div class="menu-item danger" id="ctx-delete"><i class="fa-regular fa-trash-can"></i> Delete</div>
+    </div>
+
+    <div class="modal-overlay" id="preview-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">File Preview</h3>
+                <button class="icon-btn" id="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
